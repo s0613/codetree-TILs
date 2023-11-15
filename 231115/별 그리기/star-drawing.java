@@ -17,7 +17,7 @@ public class Main {
             for(int j = i; j < n+1; j++){
                 System.out.print(" ");
             }
-            for(int k = n; k >= i; k--){
+            for(int k = 2; k < i*2-1; k++){
                 System.out.print("*");
             }
             System.out.println();
