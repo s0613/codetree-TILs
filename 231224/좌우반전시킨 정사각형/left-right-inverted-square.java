@@ -4,7 +4,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for(int i = 1; i <= n; i++){
-            int k = 4*i;
+            int k = n*i;
             for(int j = 0; j < n; j++){
                 System.out.printf("%d ", k - j*i);
             }
