@@ -8,6 +8,7 @@ public class Main {
             for(int j = 0; j <= i; j++){
                 x++;
                 System.out.print((char)x);
+                if((char)x == 'Z') x = 64;
             }
             System.out.println();
         }
