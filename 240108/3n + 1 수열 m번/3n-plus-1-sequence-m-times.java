@@ -7,7 +7,7 @@ public class Main {
             int n = sc.nextInt();
             int sum = 0;
             if(n == 1){
-                System.out.print(0);
+                System.out.println(0);
                 m--;
                 continue;
             }
