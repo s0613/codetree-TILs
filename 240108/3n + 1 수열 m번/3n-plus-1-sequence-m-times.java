@@ -8,6 +8,7 @@ public class Main {
             int sum = 0;
             if(n == 1){
                 System.out.print(0);
+                m--;
                 continue;
             }
             while(n != 1){
