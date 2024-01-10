@@ -8,8 +8,9 @@ public class Main {
         while(a != 0){
             arr[cnt] = a;
             cnt++;
+            if(cnt == 10) break;
             a = sc.nextInt();
-            if(cnt == 10) a = 0;
+            
         }
         for(int i = cnt - 1; i >= 0; i--){
             System.out.print(arr[i] + " ");
