@@ -20,6 +20,7 @@ public class Main {
         while(damn){
             if(cnt >= n1 || cnt2 >= n2){
                 System.out.print("No");
+                damn = false;
                 break;
             }
             if(arr1[cnt] == arr2[cnt2]){
@@ -32,6 +33,7 @@ public class Main {
                     }
                     if(cnt3 == n2){
                         System.out.print("Yes");
+                        damn = false;
                         break;
                     }
                     else{
@@ -40,6 +42,7 @@ public class Main {
                             continue;
                         }else{
                             System.out.print("No");
+                            damn = false;
                             break;
                         }
 
@@ -54,6 +57,7 @@ public class Main {
                     }
                     if(cnt3 == n1){
                         System.out.print("Yes");
+                        damn = false;
                         break;
                     }
                     else {
@@ -62,6 +66,7 @@ public class Main {
                             continue;
                         }
                         System.out.print("No");
+                        damn = false;
                         break;
                     }
                 }
