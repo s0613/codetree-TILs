@@ -62,7 +62,7 @@ public class Main {
                     }
                     else {
                         if(n1 < n2 - cnt - cnt3){
-                            cnt2 = cnt3+1;
+                            cnt2 += cnt3;
                             continue;
                         }
                         System.out.print("No");
