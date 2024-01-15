@@ -18,6 +18,10 @@ public class Main {
         int cnt2 = 0;
         boolean damn = true;
         while(damn){
+            if(cnt >= n1 || cnt2 >= n2){
+                System.out.print("No");
+                break;
+            }
             if(arr1[cnt] == arr2[cnt2]){
                 if(n1 > n2){
                     int cnt3 = 0;
@@ -67,10 +71,6 @@ public class Main {
                 }else cnt2++;
             }
 
-            if(cnt == n1 || cnt2 == n2){
-                System.out.print("No");
-                break;
-            }
         }
     }
 }
