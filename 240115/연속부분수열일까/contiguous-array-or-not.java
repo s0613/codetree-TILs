@@ -35,7 +35,7 @@ public class Main {
                         break;
                     }
                     else{
-                        if(n2 <= n1 - cnt - cnt3){
+                        if(n2 < n1 - cnt - cnt3){
                             cnt = cnt3+1;
                             continue;
                         }else{
@@ -57,7 +57,7 @@ public class Main {
                         break;
                     }
                     else {
-                        if(n1 <= n2 - cnt - cnt3){
+                        if(n1 < n2 - cnt - cnt3){
                             cnt2 = cnt3+1;
                             continue;
                         }
