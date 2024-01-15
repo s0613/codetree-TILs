@@ -38,7 +38,7 @@ public class Main {
                     }
                     else{
                         if(n2 < n1 - cnt - cnt3){
-                            cnt = cnt3+1;
+                            cnt += cnt3;
                             continue;
                         }else{
                             System.out.print("No");
