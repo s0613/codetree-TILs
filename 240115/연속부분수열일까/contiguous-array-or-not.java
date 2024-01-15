@@ -9,7 +9,7 @@ public class Main {
 
         for(int i = 0; i < n1; i++){
             arr1[i] = sc.nextInt();
-                    }
+        }
         for(int i = 0; i < n2; i++){
             arr2[i] = sc.nextInt();
         }
@@ -28,12 +28,17 @@ public class Main {
                     }
                     if(cnt3 == n2){
                         System.out.print("Yes");
-                        damn = false;
                         break;
                     }
                     else{
-                        System.out.print("No");
-                        break;
+                        if(n2 <= n1 - cnt - cnt3){
+                            cnt = cnt3+1;
+                            continue;
+                        }else{
+                            System.out.print("No");
+                            break;
+                        }
+
                     }
                 }
                 else{
@@ -45,17 +50,20 @@ public class Main {
                     }
                     if(cnt3 == n1){
                         System.out.print("Yes");
-                        damn = false;
                         break;
                     }
                     else {
+                        if(n1 <= n2 - cnt - cnt3){
+                            cnt2 = cnt3+1;
+                            continue;
+                        }
                         System.out.print("No");
                         break;
                     }
                 }
             }else{
                 if(n1 > n2){
-                     cnt++;
+                    cnt++;
                 }else cnt2++;
             }
 
