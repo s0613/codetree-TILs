@@ -13,16 +13,18 @@ public class Main {
                 cnt = i;
             }
         }
-        int max = 0;
+        if(cnt == n-1){
+            System.out.print(0);
+        }else{
+        int max = min;
         for(int i = cnt; i < n; i++){
             if(max < arr[i]){
                 max = arr[i];
             }
         }
-        if(cnt == n-1){
-            System.out.print(0);
+        System.out.print(max-min);
         }
-        else System.out.print(max-min);
+        
         
     }
 }
