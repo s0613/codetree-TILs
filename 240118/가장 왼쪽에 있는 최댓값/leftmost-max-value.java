@@ -15,7 +15,7 @@ public class Main {
             }
         }
         System.out.print(num+1 + " ");
-        int num2 = n;
+        int num2 = num;
         for(int i = 0; i < num2; i++){
             max = 0;
             for(int j = 0; j < num; j++){
