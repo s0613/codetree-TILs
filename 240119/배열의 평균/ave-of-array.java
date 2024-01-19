@@ -23,6 +23,6 @@ public class Main {
             System.out.print(sum/2 + " ");
         }
         System.out.println();
-        System.out.print(allSum/8);
+        System.out.printf("%.1f",allSum/8);
     }
 }
