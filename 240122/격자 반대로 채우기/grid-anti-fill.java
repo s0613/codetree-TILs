@@ -5,11 +5,12 @@ public class Main {
         int n = sc.nextInt();
         int[][] arr = new int[n][n];
         int cnt = 1;
+        int cnt2 = 0;
         for(int i = n-1; i >= 0; i--){
             int row = n-1;
             int row2 = 0;
             while(true){
-                if(i % 2 == 1){
+                if(cnt2 % 2 == 0){
                     arr[row][i] = cnt;
                     cnt++;
                     row--;
@@ -23,6 +24,7 @@ public class Main {
                     break;
                 }
             }
+            cnt2++;
         }
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
