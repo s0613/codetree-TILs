@@ -5,7 +5,7 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
         String c = a.length() > b.length() ? a : b;
-        if(a.length() == b.length){
+        if(a.length() == b.length()){
             System.out.print("same")
         }else System.out.print(c + " " + c.length());
         
