@@ -13,6 +13,6 @@ public class Main {
                 }
             }
         }
-        System.out.printf("%d",(int)'[');
+        
     }
 }
