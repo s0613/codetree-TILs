@@ -1,28 +1,30 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        char[][] arr = new char[200][200];
+
+        // 문자열 배열을 구현합니다.
+        String[] str = new String[201];
         int cnt = 0;
-        while(!str.equals("0")){
+
+        // 0이 나올때까지 반복합니다.
+        while(true) {
+            // 문자열을 입력받습니다.
+            str[cnt] = sc.next();
+            
+            // 0이 나올 경우 while문을 빠져나옵니다.
+            if(str[cnt].equals("0"))
+                break;
+            
             cnt++;
-            for(int i = 0; i < str.length(); i++){
-                arr[cnt-1][i] = str.charAt(i);
-            }
-            str = sc.nextLine();
         }
+
+        // 문자열의 개수를 출력합니다.
         System.out.println(cnt);
-        for(int i = 0; i < cnt; i++){
-            if(i % 2 == 0){
-                for(int j = 0; j < arr[i].length; j++){
-                    if(arr[i][j] == ' '){
-                        break;
-                    }
-                System.out.print(arr[i][j]);
-            }
-                
-            }
-        }
+        
+        // 홀수 번째 문자열을 출력합니다.
+        for(int i = 0; i < cnt; i += 2)
+            System.out.println(str[i]);
     }
 }
