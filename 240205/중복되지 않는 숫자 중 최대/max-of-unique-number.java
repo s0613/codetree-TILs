@@ -5,21 +5,31 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int max = Integer.MIN_VALUE;
-        int tempM = Integer.MIN_VALUE;
         int num = 0;
+
+        int[] arr = new int[n];
+
         for(int i = 0; i < n; i++){
             int temp = sc.nextInt();
-            if(max < temp){
-                max = temp;
-            }else if(max == temp){
-                max = tempM;
+            arr[i] = temp;
+        }
+
+        for(int i = 0; i < arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }else if(max == arr[i]){
                 num++;
                 if(num == n/2){
                     max = -1;
                     break;
                 }
-            }else if(tempM < temp){
-                tempM = temp;
+                int idx = 0;
+                for(int j : arr){
+                    if(j != arr[i]){
+                        arr[idx++] = j;
+                    }
+                }
+                i = 0;
             }
         }
         System.out.print(max);
