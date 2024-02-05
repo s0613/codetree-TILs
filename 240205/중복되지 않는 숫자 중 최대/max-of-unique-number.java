@@ -10,7 +10,6 @@ public class Main {
         for(int i = 0; i < n; i++){
             int temp = sc.nextInt();
             if(max < temp){
-                tempM = max;
                 max = temp;
             }else if(max == temp){
                 max = tempM;
