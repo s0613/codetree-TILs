@@ -9,6 +9,11 @@ public class Main {
         int[] arr3 = new int[2000];
         int cnt = 0;
         boolean boo = false;
+        if(n < 5 || n < 3){
+            System.out.print(-1);
+            return;
+        }
+
             if(n/5 > 0){
                 for(int i = 0; i < n/5; i++){
                     arr5[i] = 1;
