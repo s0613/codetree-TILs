@@ -13,9 +13,9 @@ public class Main {
                 max = temp;
             }else if(max == temp){
                 max = tempM;
+            }else if(tempM < temp){
+                tempM = temp;
             }
-
-            
         }
         System.out.print(max);
     }
