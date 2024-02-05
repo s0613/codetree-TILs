@@ -6,6 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int max = Integer.MIN_VALUE;
         int tempM = 0;
+        int num = 0;
         for(int i = 0; i < n; i++){
             int temp = sc.nextInt();
             if(max < temp){
@@ -13,6 +14,11 @@ public class Main {
                 max = temp;
             }else if(max == temp){
                 max = tempM;
+                num++;
+                if(num == n/2){
+                    max = -1;
+                    break;
+                }
             }else if(tempM < temp){
                 tempM = temp;
             }
