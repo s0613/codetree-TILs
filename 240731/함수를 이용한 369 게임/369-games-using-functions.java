@@ -15,11 +15,14 @@ public class Main {
         if(a % 3 == 0){
             return 1;
         }
-        for(int i = 10; i < a; i *= 10){
-            if(a % i == 3 || a / i == 3 || a % i == 6 || a / i == 6 ||a % i == 9 || a / i == 9){
+        
+        String te = Integer.toString(a);
+        for(int i = 0; i < te.length(); i++){
+            if(te.charAt(i) == '3' || te.charAt(i) == '6' || te.charAt(i) == '9'){
                 return 1;
             }
         }
+        
         return 0;
     }
 }
