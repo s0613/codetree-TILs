@@ -5,6 +5,9 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int sum = 0;
+        if(a == 1){
+            a++;
+        }
         for(int i = a; i <= b; i++){
             sum += decimal(i);
         }
