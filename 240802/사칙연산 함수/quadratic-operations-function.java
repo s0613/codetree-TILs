@@ -18,7 +18,7 @@ public class Main {
         else if(b == '*'){
             n = a*c;
         }
-        else System.out.print("False"); return;
+        else {System.out.print("False"); return;}
         System.out.print(a + " " + b + " " + c + " " + "=" + " " + n);
     }
 }
