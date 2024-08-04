@@ -19,21 +19,49 @@ public class Main {
     public static void inputTest(int[] n1, int[] n2){
         int n = n1.length;
         int nn = n2.length;
-        int nSize = n1.length > n2.length ? n1.length : n2.length;
+        int max, min;
+        if(n > nn){
+            max = n;
+            min= nn;
+            
+        }
+        else {
+            max = nn;
+            min = n;
+            int[] temp = new int[n];
+            temp = n1;
+
+        }
         int cnt = 0;
-        int n2Size = n1.length > n2.length ? n2.length : n1.length;
-        for(int i = 0; i < nSize-n2Size+1; i++){
+        if(n > nn){
+for(int i = 0; i < max-min; i++){
             cnt = 0;
-            for(int j = 0; j < n2Size; j++){
+            for(int j = 0; j < min; j++){
                 if(n1[i + j] == n2[j]){
                     cnt++;
                 }else break;
             }
-            if(cnt == n2Size){
+            if(cnt == min){
                     System.out.print("Yes");
                     return;
                 }
         }
         System.out.print("No");
+        }
+        else{
+            for(int i = 0; i < max-min; i++){
+            cnt = 0;
+            for(int j = 0; j < min; j++){
+                if(n2[i + j] == n1[j]){
+                    cnt++;
+                }else break;
+            }
+            if(cnt == min){
+                    System.out.print("Yes");
+                    return;
+                }
+        }
+        System.out.print("No");
+        }
     }
 }
