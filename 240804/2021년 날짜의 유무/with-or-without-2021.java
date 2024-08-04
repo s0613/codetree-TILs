@@ -15,12 +15,15 @@ public class Main {
             if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12){
                 if(n > 31){
                     System.out.print("No");
-                }else System.out.print("Yes");
+                    return;
+                }else {System.out.print("Yes");
+                return;}
             }
             else if(m <13){
-                if(m > 30){
+                if(n > 30){
                     System.out.print("No");
-                }else System.out.print("Yes");
+                    return;
+                }else {System.out.print("Yes"); return;}
             }else System.out.print("No");
         }
     }
