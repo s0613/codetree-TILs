@@ -34,7 +34,7 @@ public class Main {
         }
         int cnt = 0;
         if(n > nn){
-for(int i = 0; i < max-min; i++){
+        for(int i = 0; i < max-min+1; i++){
             cnt = 0;
             for(int j = 0; j < min; j++){
                 if(n1[i + j] == n2[j]){
@@ -49,7 +49,7 @@ for(int i = 0; i < max-min; i++){
         System.out.print("No");
         }
         else{
-            for(int i = 0; i < max-min; i++){
+            for(int i = 0; i < max-min+1; i++){
             cnt = 0;
             for(int j = 0; j < min; j++){
                 if(n2[i + j] == n1[j]){
