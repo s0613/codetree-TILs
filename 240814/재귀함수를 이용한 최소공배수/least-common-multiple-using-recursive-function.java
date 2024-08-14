@@ -7,26 +7,18 @@ public class Main {
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        int num = infact(0,arr);
+        int sum = 1;
+        
+        int num = infact(sum,arr);
         System.out.print(num);
     }
-    public static int infact(int num ,int[] arr){
-        
-        if(arr[num] % arr[num+1] != 0){
-            arr[num] *= arr[num+1];
-            arr[num+1] = arr[num];
-            if(arr.length-1 == num+1){
-                return arr[num];
+    public static int infact(int sum, int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            if(sum % arr[i] != 0){
+                return infact(sum+1, arr);
             }
-            return infact(num+1, arr);
         }
-        else {
-            arr[num + 1] = arr[num]; 
-            if(arr.length-1 == num+1){
-                return arr[num];
-            }
-            return infact(num+1, arr);
-        }
+        return sum;
+    }
         
     }
-}
