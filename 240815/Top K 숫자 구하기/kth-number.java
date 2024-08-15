@@ -10,6 +10,6 @@ public class Main {
         }
         Integer[] it = Arrays.stream(arr).boxed().toArray(Integer[]::new);
         Arrays.sort(it, Collections.reverseOrder());
-        System.out.print(it[k]);
+        System.out.print(it[k-1]);
     }
 }
