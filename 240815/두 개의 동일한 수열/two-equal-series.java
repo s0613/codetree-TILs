@@ -5,8 +5,15 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[n];
         int[] arr2 = new int[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+        for(int i = 0; i < n; i++){
+            arr2[i] = sc.nextInt();
+        }
         Arrays.sort(arr);
         Arrays.sort(arr2);
+
         for(int i = 0; i < n; i++){
             if(arr[i] != arr2[i]){
                 System.out.print("No");
