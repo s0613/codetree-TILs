@@ -7,9 +7,10 @@ public class Main {
         int[] arr = new int[n];
         for(int i = 0; i < n; i ++){
             arr[i] = sc.nextInt();
+           
         }
         Integer[] it = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        Arrays.sort(it, Collections.reverseOrder());
+        Arrays.sort(it);
         System.out.print(it[k-1]);
     }
 }
