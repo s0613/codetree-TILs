@@ -16,7 +16,6 @@ public class Main {
         for(int i = 0; i < n; i++){
             if(arr[i].substring(0,t.length()).equals(t)){
                 start = i;
-                
                 break;
             }
         }
@@ -25,6 +24,9 @@ public class Main {
             if(!arr[i].substring(0,t.length()).equals(t)){
                 end = i;
                 break;
+            }
+            if(i == n-1){
+                end = n;
             }
         }
         String[] str = new String[end-start];
