@@ -4,7 +4,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
-        
         String t = sc.nextLine().trim();
         String[] arr = new String[n];
         for(int i = 0; i < n; i++){
@@ -14,6 +13,9 @@ public class Main {
         int end = n;
         Arrays.sort(arr);
         for(int i = 0; i < n; i++){
+            if(arr[i].length() < t.length()){
+                continue;
+            }
             if(arr[i].substring(0,t.length()).equals(t)){
                 start = i;
                 break;
@@ -21,6 +23,9 @@ public class Main {
         }
         
         for(int i = start; i < n; i++){
+            if(arr[i].length() < t.length()){
+                continue;
+            }
             if(!arr[i].substring(0,t.length()).equals(t)){
                 end = i;
                 break;
