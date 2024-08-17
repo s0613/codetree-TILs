@@ -24,12 +24,11 @@ public class Main {
         for(int i = start; i < n; i++){
             if(!arr[i].substring(0,t.length()).equals(t)){
                 end = i;
-                
                 break;
             }
         }
-        String[] str = new String[end-start+1];
-        for(int i = 0; i < end-start+1; i++){
+        String[] str = new String[end-start];
+        for(int i = 0; i < end-start; i++){
             str[i] = arr[start + i];
         }
         System.out.print(str[k-1]);
