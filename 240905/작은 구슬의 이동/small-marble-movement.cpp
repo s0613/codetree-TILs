@@ -7,7 +7,7 @@ int main() {
     cin >> n >> t;
     int r, c;
     cin >> r >> c;
-    int dx[4] = {1,0,-1,0};
+    int dx[4] = {-1,0,1,0};
     int dy[4] = {0,-1,0,1};
     char d;
     cin >> d;
