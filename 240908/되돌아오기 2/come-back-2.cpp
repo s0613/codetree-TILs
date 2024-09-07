@@ -10,7 +10,7 @@ int main() {
     string cmd;
     cin >> cmd;
     int cnt = 0;
-
+    bool test = true;
     for(int i = 0; i < cmd.length(); i++){
         if(cmd[i] == 'F'){
             x += dx[dir];
@@ -30,8 +30,12 @@ int main() {
         cnt++;
         if(x == 0 && y == 0){
             cout << cnt;
+            test = false;
             break;
         }
+    }
+    if(test){
+        cout << "-1";
     }
     return 0;
 }
