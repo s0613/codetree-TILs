@@ -20,7 +20,11 @@ int main() {
         }
         x += dx[dir];
         y += dy[dir];
-        arr[x][y] = 65 + i;
+        int num = 65 + i;
+        if(num == 91){
+            num = 65;
+        }
+        arr[x][y] = num;
     }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
