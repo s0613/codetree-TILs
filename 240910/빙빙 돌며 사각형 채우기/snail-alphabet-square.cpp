@@ -11,6 +11,7 @@ int main() {
     int x = 0, y = 0;
     arr[0][0] = 65;
     int dir = 3;
+    int cnt = 1;
     for(int i = 1; i < n*m; i++){
         int nx = x + dx[dir];
         int ny = y + dy[dir];
@@ -20,11 +21,12 @@ int main() {
         }
         x += dx[dir];
         y += dy[dir];
-        int num = 65 + i;
-        if(num == 91){
-            num = 65;
+        
+        arr[x][y] = 65 + cnt;
+        cnt++;
+        if(cnt > 25){
+            cnt = 0;
         }
-        arr[x][y] = num;
     }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
