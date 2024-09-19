@@ -10,7 +10,10 @@ int main() {
             break;
         }
     }
-    
+    if(str == "1"){
+        cout << 0;
+    }
+    else{
     int sum = 0;
     int k = 0;
     for(int i = str.size()-1; i >= 0; i--){
@@ -24,5 +27,7 @@ int main() {
         k++;
     }
     cout << sum;
+    }
+    
     return 0;
 }
