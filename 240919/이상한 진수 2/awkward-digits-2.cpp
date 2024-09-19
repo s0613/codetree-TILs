@@ -4,16 +4,26 @@ using namespace std;
 int main() {
     string str;
     cin >> str;
+    bool test = false;
     for(int i = 0; i < str.size(); i++){
+        if(str[i] == '0'){
+            test = true;
+            break;
+        }
+    }
+    if(!test){
+        str[str.size()-1] = '0';
+    }
+    else{
+        for(int i = 0; i < str.size(); i++){
         if(str[i] == '0'){
             str[i] = '1';
             break;
         }
     }
-    if(str == "1"){
-        cout << 0;
+
     }
-    else{
+
     int sum = 0;
     int k = 0;
     for(int i = str.size()-1; i >= 0; i--){
@@ -27,7 +37,6 @@ int main() {
         k++;
     }
     cout << sum;
-    }
     
     return 0;
 }
