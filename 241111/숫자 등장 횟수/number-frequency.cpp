@@ -8,24 +8,18 @@ int main() {
     int n, m;
     cin >> n >> m;
     vector<int> arr(n,0);
+    vector<int> numarr(n+1,0);
     for(int i = 0; i < n; i++){
         cin >> arr[i];
-    }
-    vector<int> arr2(m,0);
-    for(int i = 0; i < m; i++){
-        cin >> arr2[i];
+        numarr[arr[i]]++;
     }
     
-        
-        for(int i = 0; i < m; i++){
-            int t = 0;
-            for(int k = 0; k < n; k++){
-                if(arr2[i] == arr[k]){
-                    t++;
-                }
-            }
-            cout << t << " ";
-        }
+    while(m--){
+        int a;
+        cin >> a;
+        cout << numarr[a] << " ";
+    }
+    
         
     
     return 0;
